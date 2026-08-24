@@ -1,15 +1,41 @@
-Security Disclosures
---------------------
+# Security Policy
 
-We take security issues seriously and welcome responsible disclosure of security vulnerabilities in
-Pulp. Please email pulp-security@redhat.com (a private address for the Pulp Security Team) with all
-reports.
+This is a compact version of the Pulp Security Policy.
+Read the full version [here](/security/security-policy.md).
 
-Your report should include:
+## Reporting a security vulnerability
 
-- Pulp version
-- A vulnerability description
-- Reproduction steps
-- Feel free to submit a patch with your disclosure.
+All security vulnerability reports MUST be submitted by email to: [security@ansible.com](mailto:security@ansible.com)
 
-A member of the Pulp Security Team will confirm the vulnerability, determine its impact, and develop a fix.
+Security vulnerabilities MUST NOT be reported through public channels such as GitHub issues, pull requests, the Ansible Forum, or social media.
+
+## What to include
+
+When submitting a vulnerability report, include the following:
+
+- **Title** (required): Clear, concise, descriptive summary.
+- **Impacted project** (required): Ideally a link to the GitHub project.
+- **Reporter details** (optional): Your name or handle and affiliation.
+- **Vulnerability description** (required): Technical details of the issue.
+- **Affected versions** (required): Known affected version(s), and ideally all affected versions.
+- **Reproduction steps** (required): Minimal example to reproduce the issue.
+- **Impact assessment** (required): Potential exploit scenarios and severity.
+- **Suggested fix** (optional): Proposed remediation, if any.
+- **Disclosure status** (required): Whether this has been shared with other parties or published and your plan for future sharing (e.g., at a conference).
+
+## Timeline
+
+- The Ansible Security Team aims to confirm receipt of vulnerability reports within one (3) business day.
+- Our goal is to assess the report, coordinate fix and disclosure as quickly as possible.
+- All confirmed vulnerabilities are addressed according to severity and impact.
+
+## Backports
+
+Generally, only the latest release of this project receives security updates.
+Earlier versions may receive critical fixes on a best-effort basis.
+
+## EU Cyber Resilience Act: Open-Source Steward Statement
+
+This project is stewarded by **Red Hat, Inc.**, an open-source software steward as defined in Article 3(14) of the [EU Cyber Resilience Act (Regulation 2024/2847)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng).
+
+Contact: [cra-steward@redhat.com](mailto:cra-steward@redhat.com)
