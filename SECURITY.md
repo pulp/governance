@@ -1,41 +1,74 @@
-# Security Policy
+# Pulp Security Policy
 
-This is a compact version of the Pulp Security Policy.
-Read the full version [here](/security/security-policy.md).
+## Goal
 
-## Reporting a security vulnerability
+This document defines the official Security Policy for The Pulp Project.
 
-All security vulnerability reports MUST be submitted by email to: [security@ansible.com](mailto:security@ansible.com)
+## Commitment
 
-Security vulnerabilities MUST NOT be reported through public channels such as GitHub issues, pull requests, the Ansible Forum, or social media.
+This project is stewarded by **Red Hat, Inc.**, an open-source software steward as defined in Article 3(14) of the [EU Cyber Resilience Act (Regulation 2024/2847)].
 
-## What to include
+Red Hat takes security seriously.
+Red Hat is committed to maintaining the highest level of security and trust for all users.
+Red Hat appreciates the Pulp community and security researchers' efforts in helping identify and address vulnerabilities responsibly.
 
-When submitting a vulnerability report, include the following:
+Contact: [cra-steward@redhat.com]
 
-- **Title** (required): Clear, concise, descriptive summary.
-- **Impacted project** (required): Ideally a link to the GitHub project.
-- **Reporter details** (optional): Your name or handle and affiliation.
-- **Vulnerability description** (required): Technical details of the issue.
-- **Affected versions** (required): Known affected version(s), and ideally all affected versions.
-- **Reproduction steps** (required): Minimal example to reproduce the issue.
-- **Impact assessment** (required): Potential exploit scenarios and severity.
-- **Suggested fix** (optional): Proposed remediation, if any.
-- **Disclosure status** (required): Whether this has been shared with other parties or published and your plan for future sharing (e.g., at a conference).
+## Scope
 
-## Timeline
+- Pulp Core (pulpcore)
+- All maintained plugins under [the Pulp GitHub organization]
+  - Includes plugins maintained by the core Red Hat team and community maintainers
+- All contributors, maintainers, committers, and security researchers interacting with these projects
 
-- The Ansible Security Team aims to confirm receipt of vulnerability reports within one (3) business day.
-- Our goal is to assess the report, coordinate fix and disclosure as quickly as possible.
-- All confirmed vulnerabilities are addressed according to severity and impact.
+Third-party collections or plugins hosted outside the Pulp organization are out of scope but are encouraged to adopt compatible practices.
 
-## Backports
+## Reporting a vulnerability
 
-Generally, only the latest release of this project receives security updates.
-Earlier versions may receive critical fixes on a best-effort basis.
+All reports MUST be submitted by email to: [pulp-security@redhat.com]
 
-## EU Cyber Resilience Act: Open-Source Steward Statement
+Security vulnerabilities MUST NOT be reported through any public or insecure method, including but not limited to
+Public GitHub issues, Pull Requests, Pulp Discourse, Pulp Matrix, Public forums or social media.
 
-This project is stewarded by **Red Hat, Inc.**, an open-source software steward as defined in Article 3(14) of the [EU Cyber Resilience Act (Regulation 2024/2847)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng).
+Please refer to the [Vulnerability Management Policy] for full details on how to report a vulnerability.
 
-Contact: [cra-steward@redhat.com](mailto:cra-steward@redhat.com)
+## Incident response
+
+A security incident is any event indicating that Pulp project infrastructure, build systems, distribution channels, or governance accounts have been compromised or are under active attack.
+This is distinct from a vulnerability report (a flaw in code) and requires operational response.
+
+The response steps are:
+
+1. **Contain:** Isolate affected systems, revoke compromised credentials, and halt affected release pipelines
+1. **Assess:** Determine the scope, impact, and root cause of the incident
+1. **Remediate:** Apply fixes, rotate credentials, rebuild affected artifacts from verified sources
+1. **Communicate:** Notify affected parties. For incidents affecting released artifacts, issue a public advisory
+1. **Post-mortem:** Conduct a blameless post-incident review. Document lessons learned and update this policy if warranted
+
+## Security Policy Hierarchy
+
+The `SECURITY.md` file is the standard location where users, developers, and security researchers can find information on how to report a potential vulnerability for a particular repository.
+Having this file ensures high visibility and automatic integration with GitHub's security features.
+
+Each project SHOULD host a `SECURITY.md` file in the root directory of their GitHub repository.
+The `SECURITY.md` file MAY be a copy of this policy.
+If the file exists and is not an exact copy, it MUST point to this document as an authoritative policy.
+
+## Policy governance
+
+This policy may be updated periodically.
+Suggestions for improvement can be submitted through issues or pull requests to the [pulp/governance] repository.
+
+## Notes
+
+The key words "MUST", "MUST NOT", and "SHOULD" in this document are to be interpreted as described in [RFC 2119].
+
+<!-- links -->
+
+[the pulp github organization]: https://github.com/pulp/
+[vulnerability management policy]: docs/vulnerability-management-policy.md
+[eu cyber resilience act (regulation 2024/2847)]: https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng
+[cra-steward@redhat.com]: mailto:cra-steward@redhat.com
+[pulp-security@redhat.com]: mailto:pulp-security@redhat.com
+[pulp/governance]: https://github.com/pulp/governance
+[rfc 2119]: https://www.rfc-editor.org/rfc/rfc2119.html
