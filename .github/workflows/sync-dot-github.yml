@@ -15,20 +15,21 @@ jobs:
     steps:
       - name: Generate GitHub App token
         id: app-token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ secrets.PULP_APP_ID }}
           private-key: ${{ secrets.PULP_APP_PRIVATE_KEY }}
           owner: pulp
           repositories: .github
+          permission-contents: write
 
       - name: Checkout governance repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: governance
 
       - name: Checkout pulp/.github repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: pulp/.github
           token: ${{ steps.app-token.outputs.token }}
