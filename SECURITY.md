@@ -23,6 +23,17 @@ Contact: [cra-steward@redhat.com]
 
 Third-party collections or plugins hosted outside the Pulp organization are out of scope but are encouraged to adopt compatible practices.
 
+## Secure Development Practices
+
+We follow established industry best practices for secure development including, but not limited to:
+
+- Secured version control of source code with push restrictions
+- Automated testing of security relevant features (e.g. authentication)
+- Mandatory peer reviews and CI checks for integrating code into release branches
+- Automated distribution of CI updates via [plugin-template]
+- Semi-automatic updates of third-party dependencies via [Dependabot]
+- Automated secret leak detection via [GitLeaks]
+
 ## Reporting a vulnerability
 
 All reports MUST be submitted by email to: [pulp-security@redhat.com]
@@ -72,3 +83,6 @@ The key words "MUST", "MUST NOT", and "SHOULD" in this document are to be interp
 [pulp-security@redhat.com]: mailto:pulp-security@redhat.com
 [pulp/governance]: https://github.com/pulp/governance
 [rfc 2119]: https://www.rfc-editor.org/rfc/rfc2119.html
+[gitleaks]: https://github.com/gitleaks/gitleaks
+[dependabot]: https://github.com/dependabot
+[plugin-template]: https://github.com/pulp/plugin_template/
